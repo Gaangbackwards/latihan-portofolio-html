@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - Belajar Form & Link HTML</title>
+</head>
+<body>
+    <header>
+        <h1>kontak</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="profil.html">Profil Saya</a></li>
+            <li><a href="keahlian.html">Keahlian</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+
+    <main>
+      
+        <section>
+            <h2>Media Sosial & Hubungan Langsung</h2>
+            <p>Anda bisa langsung menghubungi saya atau melihat proyek saya melalui link di bawah ini:</p>
+            <ul>
+                
+                <li><strong>Email:</strong> <a href="mailto:anggasandinugraha0@gmail.com">anggasandinugraha0@gmail.com</a></li>
+                
+                <!-- target="_blank" digunakan agar link terbuka di tab baru, sehingga pengunjung tidak meninggalkan web Anda -->
+                <li><strong>GitHub:</strong> <a href="https://github.com/Gaangbackwards" target="_blank">Gaangbackwards</a></li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <!-- BAGIAN 2: FORMULIR INTERAKTIF -->
+        <section>
+            <h2>Formulir </h2>
+            
+
+            <form action="#" method="POST">
+
+                <!-- INPUT TEKS BIASA -->
+                <p>
+                   
+                    <label for="nama">Nama Lengkap:</label><br>
+                    
+                    <input type="text" id="nama" name="nama_lengkap" placeholder="Contoh: angga" required>
+                </p>
+
+                <!-- INPUT EMAIL DI DALAM FORM -->
+                <p>
+                    <label for="email">Alamat Email:</label><br>
+                    <!-- type="email" otomatis memvalidasi (tanda @) -->
+                    <input type="email" id="email" name="surel" placeholder="anggasandinugraha0@gmail.com" required>
+                </p>
+
+                <!-- INPUT NOMOR TELEPON -->
+                <p>
+                    <label for="telp">Nomor Telepon/WA:</label><br>
+                    <!-- type="tel" digunakan khusus untuk nomor telepon -->
+                    <input type="tel" id="telp" name="no_hp" placeholder="081222634834">
+                </p>
+
+                <!-- PILIHAN DROP-DOWN (SELECT OPTION) -->
+                <p>
+                    <label for="kategori">drop-down</label><br>
+                    <!-- <select> membuat menu pilihan yang bisa diklik ke bawah -->
+                    <select id="kategori" name="tujuan_pesan">
+                        <!-- <option> adalah daftar pilihan di dalam menu drop-down -->
+                        <option value="kerjasama">contoh 1</option>
+                        <option value="tanya">contoh 2</option>
+                        <option value="kritik">contoh 3</option>
+                    </select>
+                </p>
+
+                <!-- PILIHAN BULAT (RADIO BUTTON) -->
+                <p>
+                    <label>Metode Respon yang Diinginkan:</label><br>
+                    <!-- type="radio" digunakan untuk memilih SALAH SATU dari beberapa pilihan.
+                         PENTING: Atribut 'name' harus SAMA (di sini: 'respon') agar sistem tahu pilihan ini saling berhubungan -->
+                    <input type="radio" id="lewat_email" name="respon" value="email" checked>
+                    <label for="lewat_email">email</label><br>
+                    
+                    <input type="radio" id="lewat_wa" name="respon" value="whatsapp">
+                    <label for="lewat_wa">WhatsApp</label>
+                </p>
+
+                <!-- KOTAK CENTANG (CHECKBOX) -->
+                <p>
+                    <!-- type="checkbox" digunakan jika pengguna boleh memilih lebih dari satu (atau tidak memilih sama sekali) -->
+                    <input type="checkbox" id="cek" name="newsletter" value="ya">
+                    <label for="cek">cek</label>
+                </p>
+
+                <!-- AREA TEKS BESAR (TEXTAREA) -->
+                <p>
+                    <label for="pesan">Isi Pesan Anda:</label><br>
+                    <!-- <textarea> digunakan untuk teks panjang. rows mengatur tinggi kotak, cols mengatur lebar kotak -->
+                    <textarea id="pesan" name="isi_pesan" rows="6" cols="40" placeholder="Tuliskan pesan Anda di sini" required></textarea>
+                </p>
+
+                <!-- TOMBOL-TOMBOL FORM (BUTTON) -->
+                <p>
+                    <!-- type="submit" untuk mengirimkan seluruh data di dalam form ke action -->
+                    <button type="submit">Kirim Pesan</button>
+                    
+                    <!-- type="reset" untuk menghapus atau mengosongkan kembali semua inputan yang sudah diketik -->
+                    <button type="reset">Kosongkan Form</button>
+                </p>
+
+            </form>
+        </section>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2026 Pelatihan di bbpvp Bandung</p>
+    </footer>
+</body>
+</html>
